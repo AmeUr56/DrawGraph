@@ -1,4 +1,4 @@
-#DrawGraph
+*DrawGraph
 #### Description:
 my project is a webapp graphs maker that uses Flask as a backend,HTML and CSS as frontend,
 there is two sections 2D or 3D and there are a diffirent shapes and figures in the webapp 

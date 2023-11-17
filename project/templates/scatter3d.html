@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/plotstyle.css">
+
+    <title>Dots 3D</title>
+</head>
+<body>
+
+    <div class="page-header">
+    <a href = "/"><h2>Home</h2></a>
+    <h1>Dots 3D</h1>
+    <a href = "/scatter3d"><h2></h2></a>
+    </div>
+
+    <form action="/scatter3d" method="post">
+        <!--X-->
+        <div>
+            <h2>X<p>*</p></h2>
+            <input required autocomplete="off" autofocus class="form-control mx-auto w-auto" id="x" name="x" placeholder="x1,x2,..." type="text">
+        </div>
+
+        <!--Y-->
+        <div>
+            <h2>Y<p>*</p></h2>
+            <input required autocomplete="off" autofocus class="form-control mx-auto w-auto" id="y" name="y" placeholder="y1,y2,..." type="text">
+        </div>
+
+        <!--Z-->
+        <div>
+            <h2>Z<p>*</p></h2>
+            <input required autocomplete="off" autofocus class="form-control mx-auto w-auto" id="z" name="z" placeholder="z1,z2,..." type="text">
+        </div>
+
+         <!--Theme-->
+         <div>
+            <h3>Theme</h3>
+            <select name="theme" id="theme">
+                <option value="" disabled selected></option>
+                {% for style in styles %}
+                <option value="{{ style }}">{{ style }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <!--size-->
+        <div>
+            <h2>Size</h2>
+            <input  autocomplete="off" autofocus class="form-control mx-auto w-auto" id="size" name="size" placeholder="size" type="text">
+        </div>
+
+        <!--Colormap-->
+        <div>
+            <h2>Color Maps<a href = '/colormap' target="_blank"><h4>(!)</h4></a></h2>
+            <select name="colormap" id="colormap">
+                <option value="" disabled selected></option>
+                {% for colormap in colormaps%}
+                    <option value="{{ colormap }}" >{{ colormap }}</option>
+                {% endfor%}
+            </select>
+        </div>
+
+        <!--Colorbar-->
+        <div>
+            <h2>Color Bar</h2>
+            <select name="colorbar" id="colorbar">
+                <option value="" disabled selected></option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+
+         <!--View-->
+         <div>
+            <h2>View<a href = '/view' target="_blank"><h4>(!)</h4></a></h2>
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="view" name="view" placeholder="elevation,azimuthal" type="text">
+        </div>
+
+        <!--Transperity-->
+        <div>
+            <h3>Transperity</h3>
+            <input  autocomplete="off" autofocus class="form-control mx-auto w-auto" id="alpha" name="alpha" placeholder="0~1" type="text">
+        </div>
+
+        <!--Title-->
+        <div>
+            <h3>Title</h3>
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="title" name="title" placeholder="Title" type="text">
+        </div>
+
+        <!--X label-->
+        <div >
+            <h3>X label</h3>
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="xlabel" name="xlabel" placeholder="X label" type="text">
+        </div>
+
+
+        <!--Y label-->
+        <div>
+            <h3>Y label</h3>
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="ylabel" name="ylabel" placeholder="Y label" type="text">
+        </div>
+
+        <!--Z label-->
+        <div>
+            <h3>Z label</h3>
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="zlabel" name="zlabel" placeholder="Z label" type="text">
+        </div>
+
+        <button  type="submit">Plot</button>
+    </form>
+</body>

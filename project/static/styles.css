@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 100vh;
+    margin: 0;
+    background-color: lightcyan;
+    background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+    font-family: 'Roboto', sans-serif;
+
+}
+
+h1 {
+    color: #333;
+    font-size: 80px;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image-container a {
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+}
+
+.image-container img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.image-container p {
+    margin: 10px 0 0;
+}
+
+p {
+    font-size: large;
+}

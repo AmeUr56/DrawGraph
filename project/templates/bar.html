@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/plotstyle.css">
+
+    <title>Bar</title>
+</head>
+<body>
+
+    <div class="page-header">
+    <a href = "/"><h2>Home</h2></a>
+    <h1>Bar</h1>
+    <a href = "/bar"><h2></h2></a>
+    </div>
+
+    <form action="/bar" method="post">
+        <!--Y data-->
+        <div>
+            <h2>Y data<p>*</p></h2>
+            <input required autocomplete="off" autofocus class="form-control mx-auto w-auto" id="y" name="y" placeholder="y1,y2,..." type="text">
+        </div>
+
+        <!--Labels-->
+        <div>
+            <h2>Labels<p>*</p></h2>
+            <input  required autocomplete="off" autofocus class="form-control mx-auto w-auto" id="labels" name="labels" placeholder="label" type="text">
+            <input  autocomplete="off" autofocus class="form-control mx-auto w-auto" id="rotation" name="rotation" placeholder="rotation" type="text">
+        </div>
+
+         <!--Theme-->
+         <div>
+            <h3>Theme</h3>
+            <select name="theme" id="theme">
+                <option value="" disabled selected></option>
+                {% for style in styles %}
+                <option value="{{ style }}">{{ style }}</option>
+                {% endfor %}
+            </select>
+
+        <!--Colors-->
+        <div>
+            <h3>Colors</h3>
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="colors" name="colors" placeholder="color1,color2,..." type="text">
+        </div>
+        <!--Transperity-->
+        <div>
+            <h3>Transperity</h3>
+            <input  autocomplete="off" autofocus class="form-control mx-auto w-auto" id="alpha" name="alpha" placeholder="0~1" type="text">
+        </div>
+
+        <!--Title-->
+        <div>
+            <h3>Title</h3>
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="title" name="title" placeholder="Title" type="text">
+        </div>
+
+        <!--X label-->
+        <div >
+            <h3>X label</h3>
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="xlabel" name="xlabel" placeholder="X label" type="text">
+        </div>
+
+
+        <!--Y label-->
+        <div>
+            <h3>Y label</h3>
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="ylabel" name="ylabel" placeholder="Y label" type="text">
+        </div>
+
+        <button  type="submit">Plot</button>
+    </form>
+</body>

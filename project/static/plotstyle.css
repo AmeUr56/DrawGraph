@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightcyan;
+    background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    font-size: 60px;
+}
+h2, h3 {
+    color: #333;
+    display:inline;
+}
+
+p {
+    color: red;
+    margin-left: 5px;
+    display:inline;
+}
+h4 {
+    color: green;
+    margin-left: 5px;
+    display:inline;
+}
+h5 {
+    text-align:center;
+    font-size:15px;
+}
+form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form input[type="text"], form input[type="number"], form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.page-header a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.page-header h1 {
+    color: #333;
+}
+
+.page-header h2 {
+    color: #555;
+}
+
+.centered-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered-image {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+a {
+    text-decoration:none;
+}
+
+.container {
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover {
+    background-color: #2980b9;
+}

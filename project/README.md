@@ -5,3 +5,7 @@ there is two sections 2D or 3D and there are a diffirent shapes and figures in t
 from preperties that user enter like x,y or z in 3D and a lot cool ones.
 '*' means its required.
 (!) direct you to another page which you can find the property explained.
+
+### Install Libraries
+just run this in terminal
+pip install -r requirements.txt

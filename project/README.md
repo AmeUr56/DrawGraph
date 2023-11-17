@@ -6,6 +6,7 @@ from preperties that user enter like x,y or z in 3D and a lot cool ones.
 '*' means its required.
 (!) direct you to another page which you can find the property explained.
 
-### Install Libraries
+## Install Libraries
 just run this in terminal
+```bash
 pip install -r requirements.txt
